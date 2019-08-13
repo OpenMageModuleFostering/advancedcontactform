@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Zestard_Advancecontactform>
-            <version>1.0.0</version>
+            <version>1.0.2</version>
         </Zestard_Advancecontactform>
     </modules>
    
@@ -10,7 +10,7 @@
         <acl>
             <resources>
                 <all>
-                    <title>Advancecontactform</title>
+                    <title>Advance Contact Form</title>
                 </all>
                 <admin>
                     <children>
@@ -83,5 +83,4 @@
                 </advancecontactform>
             </advancecontactformsetting>
     </default>
-    
 </config>

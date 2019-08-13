@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>advancedcontactform</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
@@ -9,10 +9,10 @@
     <summary>Zestard Advancecontactform provide a feature to send mail to specific departpartment persons simultaneously.</summary>
     <description>Zestard Advancecontactform provide a feature to send mail to specific departpartment persons simultaneously.</description>
     <notes>Zestard Advancecontactform provide a feature to send mail to specific departpartment persons simultaneously.</notes>
-    <authors><author><name>yogesh</name><user>yogesh</user><email>yogesh@zestard.com</email></author></authors>
-    <date>2015-06-30</date>
-    <time>14:07:42</time>
-    <contents><target name="mageetc"><dir name="modules"><file name="Zestard_Advancecontactform.xml" hash="a8e91bdc9a6bdda213510593b8ee10d2"/></dir></target><target name="magecommunity"><dir name="Zestard"><dir name="Advancecontactform"><dir name="Helper"><file name="Data.php" hash="d949271129e03a46e21daf7a516de831"/></dir><dir name="controllers"><file name="IndexController.php" hash="6b0f6d2859026d7c360d63b892544d47"/></dir><dir name="etc"><file name="config.xml" hash="a2b83cf38dffad01d23563b2609c778e"/><file name="system.xml" hash="6bf50409036648d00c3081f360941836"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="advancecontactform.xml" hash="3a211ee456777c0316268d65259bebf2"/></dir><dir name="template"><dir name="advancecontactform"><file name="advancecontactform.phtml" hash="e87b5080f5cbbee9ba579774be921857"/></dir></dir></dir></dir></dir></target><target name="magelocale"><dir name="en_US"><dir name="template"><dir name="email"><dir name="advancecontactform"><file name="advancecontactform.html" hash="9e9ac4507c297010569d63fe26c3c1f1"/></dir></dir></dir></dir></target></contents>
+    <authors><author><name>Zestard</name><user>ZestardTech</user><email>support@zestard.com</email></author></authors>
+    <date>2016-02-09</date>
+    <time>10:52:03</time>
+    <contents><target name="magecommunity"><dir name="Zestard"><dir name="Advancecontactform"><dir name="Helper"><file name="Data.php" hash="d949271129e03a46e21daf7a516de831"/></dir><dir name="controllers"><file name="IndexController.php" hash="af4212410810a5b760e593140dfa7299"/></dir><dir name="etc"><file name="config.xml" hash="6c8702614453462b5556e121d74cad37"/><file name="system.xml" hash="2c339ef4d31012264abe79655b12e467"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Zestard_Advancecontactform.xml" hash="a8e91bdc9a6bdda213510593b8ee10d2"/></dir></target><target name="magelocale"><dir name="en_US"><dir name="template"><dir name="email"><dir name="advancecontactform"><file name="advancecontactform.html" hash="9e9ac4507c297010569d63fe26c3c1f1"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="advancecontactform.xml" hash="3a211ee456777c0316268d65259bebf2"/></dir><dir name="template"><dir name="advancecontactform"><file name="advancecontactform.phtml" hash="7e9eda6a49e04313c1ed00b651ec1172"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="images"><dir name="acf"><file name="zestard-logo.png" hash="fbf51108e5c6f796c5d2a6294690c352"/></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

@@ -33,13 +33,11 @@
  */
 class Zestard_Advancecontactform_IndexController extends Mage_Core_Controller_Front_Action
 {
-
    public function indexAction()
    {
        $this->loadLayout();
         $this->getLayout()->getBlock('advancecontactForm')
             ->setFormAction( Mage::getUrl('*/*/post') );
-
         $this->_initLayoutMessages('customer/session');
         $this->_initLayoutMessages('catalog/session');
         $this->renderLayout();
@@ -47,9 +45,6 @@ class Zestard_Advancecontactform_IndexController extends Mage_Core_Controller_Fr
     public function postAction()
     {
         $post = $this->getRequest()->getPost();
-//        echo '<pre>';
-//        print_r($post);
-//        die();
         if ( $post ) {
             $translate = Mage::getSingleton('core/translate');
             /* @var $translate Mage_Core_Model_Translate */
@@ -57,9 +52,7 @@ class Zestard_Advancecontactform_IndexController extends Mage_Core_Controller_Fr
             try {
                 $postObject = new Varien_Object();
                 $postObject->setData($post);
-
                 $error = false;
-
                 if (!Zend_Validate::is(trim($post['fname']) , 'NotEmpty')) {
                     $error = true;
                 }
@@ -87,9 +80,7 @@ class Zestard_Advancecontactform_IndexController extends Mage_Core_Controller_Fr
                 if ($error) {
                     throw new Exception();
                 }
-                
                 $contactPersons = explode(",", $post["contactperson"]);
-                
                 foreach ($contactPersons as $key => $contactPerson) 
                 {
                     $mailTemplate = Mage::getModel('core/email_template');
@@ -103,33 +94,25 @@ class Zestard_Advancecontactform_IndexController extends Mage_Core_Controller_Fr
                             null,
                             array('data' => $postObject)
                         );
-
                     if (!$mailTemplate->getSentSuccess()) 
                     {
                         throw new Exception();
                     }
                 }
-               
-               
-
                 $translate->setTranslateInline(true);
-
-                Mage::getSingleton('customer/session')->addSuccess(Mage::helper('contacts')->__('Your inquiry was submitted and will be responded to as soon as possible. Thank you for contacting us.'));
+                Mage::getSingleton('core/session')->addSuccess(Mage::helper('contacts')->__('Your inquiry was submitted and will be responded to as soon as possible. Thank you for contacting us.'));
                 $this->_redirect('*/*/index');
-
                 return;
             } catch (Exception $e) {
                 $translate->setTranslateInline(true);
-                
-                Mage::getSingleton('customer/session')->addError(Mage::helper('contacts')->__('Unable to submit your request. Please, try again later'
+                Mage::getSingleton('core/session')->addError(Mage::helper('contacts')->__('Unable to submit your request. Please, try again later'
                         ));
                 $this->_redirect('*/*/index');
                 return;
             }
-
         } else {
             $this->_redirect('*/*/index');
         }
     }
-    
 }
+?>
