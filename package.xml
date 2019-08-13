@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>advancedcontactform</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
     <extends/>
-    <summary>Zestard Advancecontactform provide a feature to send mail to specific departpartment persons simultaneously.</summary>
-    <description>Zestard Advancecontactform provide a feature to send mail to specific departpartment persons simultaneously.</description>
-    <notes>Zestard Advancecontactform provide a feature to send mail to specific departpartment persons simultaneously.</notes>
+    <summary>AdvancedContactForm</summary>
+    <description>AdvancedContactForm</description>
+    <notes>AdvancedContactForm</notes>
     <authors><author><name>Zestard</name><user>ZestardTech</user><email>support@zestard.com</email></author></authors>
-    <date>2016-02-09</date>
-    <time>10:52:03</time>
-    <contents><target name="magecommunity"><dir name="Zestard"><dir name="Advancecontactform"><dir name="Helper"><file name="Data.php" hash="d949271129e03a46e21daf7a516de831"/></dir><dir name="controllers"><file name="IndexController.php" hash="af4212410810a5b760e593140dfa7299"/></dir><dir name="etc"><file name="config.xml" hash="6c8702614453462b5556e121d74cad37"/><file name="system.xml" hash="2c339ef4d31012264abe79655b12e467"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Zestard_Advancecontactform.xml" hash="a8e91bdc9a6bdda213510593b8ee10d2"/></dir></target><target name="magelocale"><dir name="en_US"><dir name="template"><dir name="email"><dir name="advancecontactform"><file name="advancecontactform.html" hash="9e9ac4507c297010569d63fe26c3c1f1"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="advancecontactform.xml" hash="3a211ee456777c0316268d65259bebf2"/></dir><dir name="template"><dir name="advancecontactform"><file name="advancecontactform.phtml" hash="7e9eda6a49e04313c1ed00b651ec1172"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="images"><dir name="acf"><file name="zestard-logo.png" hash="fbf51108e5c6f796c5d2a6294690c352"/></dir></dir></dir></dir></dir></target></contents>
+    <date>2016-06-24</date>
+    <time>14:38:17</time>
+    <contents><target name="magecommunity"><dir name="Zestard"><dir name="Advancecontactform"><dir name="Helper"><file name="Data.php" hash="d949271129e03a46e21daf7a516de831"/></dir><dir name="controllers"><file name="IndexController.php" hash="654adb12c4ca596768b57c7c0b56044e"/></dir><dir name="etc"><file name="config.xml" hash="6c8702614453462b5556e121d74cad37"/><file name="system.xml" hash="2c339ef4d31012264abe79655b12e467"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="advancecontactform.xml" hash="3a211ee456777c0316268d65259bebf2"/></dir><dir name="template"><dir name="advancecontactform"><file name="advancecontactform.phtml" hash="7e9eda6a49e04313c1ed00b651ec1172"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Zestard_Advancecontactform.xml" hash="a8e91bdc9a6bdda213510593b8ee10d2"/></dir></target><target name="magelocale"><dir name="en_US"><dir name="template"><dir name="email"><dir name="advancecontactform"><file name="advancecontactform.html" hash="fc6ac3f2d9e1b19f4f1b5419a4a23f4d"/></dir></dir></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="images"><dir name="acf"><file name="zestard-logo.png" hash="fbf51108e5c6f796c5d2a6294690c352"/></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

@@ -50,8 +50,8 @@ class Zestard_Advancecontactform_IndexController extends Mage_Core_Controller_Fr
             /* @var $translate Mage_Core_Model_Translate */
             $translate->setTranslateInline(false);
             try {
-                $postObject = new Varien_Object();
-                $postObject->setData($post);
+//                $postObject = new Varien_Object();
+//                $postObject->setData($post);
                 $error = false;
                 if (!Zend_Validate::is(trim($post['fname']) , 'NotEmpty')) {
                     $error = true;
@@ -83,22 +83,24 @@ class Zestard_Advancecontactform_IndexController extends Mage_Core_Controller_Fr
                 $contactPersons = explode(",", $post["contactperson"]);
                 foreach ($contactPersons as $key => $contactPerson) 
                 {
-                    $mailTemplate = Mage::getModel('core/email_template');
-                    /* @var $mailTemplate Mage_Core_Model_Email_Template */
-                    $mailTemplate->setDesignConfig(array('area' => 'frontend'))
-                        ->setReplyTo($post['email'])
-                        ->sendTransactional(
-                            Mage::getStoreConfig('advancecontactformsetting/advancecontactform/advancecontactformtemplate'),
-                            Mage::getStoreConfig('advancecontactformsetting/advancecontactform/sender_email_identity'),
-                            trim($contactPerson),
-                            null,
-                            array('data' => $postObject)
-                        );
-                    if (!$mailTemplate->getSentSuccess()) 
-                    {
-                        throw new Exception();
-                    }
-                }
+                    //$mailTemplate = Mage::getModel('core/email_template');
+                    $ident = Mage::getStoreConfig('advancecontactformsetting/advancecontactform/sender_email_identity');
+                    $fromName = Mage::getStoreConfig('trans_email/ident_'.$ident.'/name');
+                    $fromEmail = Mage::getStoreConfig('trans_email/ident_'.$ident.'/email');
+                    $emailTemplate = Mage::getModel('core/email_template')->loadDefault(Mage::getStoreConfig('advancecontactformsetting/advancecontactform/advancecontactformtemplate'));
+                    $emailTemplateVariables = $post;
+                    $processedTemplate = $emailTemplate->getProcessedTemplate($emailTemplateVariables);
+                 
+                    $mail = Mage::getModel('core/email')
+                            ->setToName($post['fname'])
+                            ->setToEmail($contactPerson)
+                            ->setBody($processedTemplate)
+                            ->setSubject('Contasct Details of - '.$post['fname']. ' '.$post['lname'])
+                            ->setFromEmail($fromEmail)
+                            ->setFromName($fromName)
+                            ->setType('html');
+                    $mail->send();
+                    /* @var $mailTemplate Mage_Core_Model_Email_Template */                }
                 $translate->setTranslateInline(true);
                 Mage::getSingleton('core/session')->addSuccess(Mage::helper('contacts')->__('Your inquiry was submitted and will be responded to as soon as possible. Thank you for contacting us.'));
                 $this->_redirect('*/*/index');
