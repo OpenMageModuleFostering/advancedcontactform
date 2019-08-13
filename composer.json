@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/advancedcontactform",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Zestard Advancecontactform provide a feature to send mail to specific departpartment persons simultaneously.",
+    "authors": [
+    {
+        "name": "yogesh",
+        "email": "yogesh@zestard.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
