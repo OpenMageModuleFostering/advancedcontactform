@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/advancedcontactform",
+    "name": "OpenMageModuleFostering\/advancedcontactform",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "AdvancedContactForm",
     "authors": [
-    {
-        "name": "Zestard",
-        "email": "support@zestard.com"
-    }
-],
+        {
+            "name": "Zestard",
+            "email": "support@zestard.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
