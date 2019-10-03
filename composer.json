@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/advancedcontactform",
+    "name": "openmage-module-fostering\/advancedcontactform",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "AdvancedContactForm",
     "authors": [
